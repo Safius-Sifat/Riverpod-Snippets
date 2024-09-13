@@ -1,22 +1,21 @@
 {
-  "Change Notifier Provider": {
-    "scope": "dart",
-    "prefix": "changeNotifierProvider",
-    "description": "Create a ChangeNotifierProvider",
-    "body": [
-      "final $1Provider = ChangeNotifierProvider<$2>((ref) {",
-      "\treturn $3;",
-      "});"
-    ]
+  "Riverpod: ChangeNotifier Provider": {
+      "prefix": "changeNotifierProvider",
+      "body": [
+          "final ${1:providerName}Provider = ChangeNotifierProvider<${2:NotifierClass}>((ref) {",
+          "  return ${3:instance};",
+          "});"
+      ],
+      "description": "Create a ChangeNotifierProvider"
   },
-  "Change Notifier Provider with Family": {
-    "scope": "dart",
-    "prefix": "changeNotifierProviderFamily",
-    "description": "Create a ChangeNotifierProvider with Family modifier",
-    "body": [
-      "final $1Provider = ChangeNotifierProvider.family<$2, $3>((ref, $4) {",
-      "\treturn $5;",
-      "});"
-    ]
+  "Riverpod: ChangeNotifier Provider with Family": {
+      "prefix": "changeNotifierProviderFamily",
+      "body": [
+          "final ${1:providerName}Provider = ChangeNotifierProvider.family<${2:NotifierClass}, ${3:FamilyType}>((ref, ${4:arg}) {",
+          "  return ${5:instance};",
+          "});"
+      ],
+      "description": "Create a ChangeNotifierProvider with Family modifier"
+  
   }
 }

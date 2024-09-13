@@ -1,28 +1,26 @@
 {
     "Riverpod: AsyncNotifier class": {
-        "scope": "dart",
-		"prefix": "asyncNotifier",
-		"description": "Create an AsyncNotifier class",
-		"body": [
-			"class $1Notifier extends AsyncNotifier<$2> {",
-			"\t@override",
-			"\tFutureOr<$2> build() {",
-			"\t\treturn $3;",
-			"\t}",
-			"}"
-		]
-	},
-	"Riverpod: Family AsyncNotifier class": {
-        "scope": "dart",
-		"prefix": "asyncNotifierFamily",
-		"description": "Create an AsyncNotifier with Family Parameter",
-		"body": [
-			"class $1Notifier extends FamilyAsyncNotifier<$2, $3> {",
-			"\t@override",
-			"\tFutureOr<$2> build($3 arg) {",
-			"\t\treturn $4;",
-			"\t}",
-			"}"
-		]
-	},
+        "prefix": "asyncNotifier",
+        "body": [
+            "class ${1:Notifier} extends AsyncNotifier<${2:StateType}> {",
+            "  @override",
+            "  FutureOr<${2:StateType}> build() {",
+            "    return ${3:initialValue};",
+            "  }",
+            "}"
+        ],
+        "description": "Create an AsyncNotifier class"
+    },
+    "Riverpod: Family AsyncNotifier class": {
+        "prefix": "asyncNotifierFamily",
+        "body": [
+            "class ${1:Notifier} extends FamilyAsyncNotifier<${2:StateType}, ${3:ArgType}> {",
+            "  @override",
+            "  FutureOr<${2:StateType}> build(${3:ArgType} arg) {",
+            "    return ${4:initialValue};",
+            "  }",
+            "}"
+        ],
+        "description": "Create an AsyncNotifier with Family Parameter"
+    }
 }

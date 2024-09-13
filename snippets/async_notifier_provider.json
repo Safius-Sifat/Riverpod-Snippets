@@ -1,18 +1,16 @@
 {
     "Riverpod: AsyncNotifier Provider": {
-        "scope": "dart",
-		"prefix": "asyncNotifierProvider",
-		"description": "Create an AsyncNotifierProvider",
-		"body": [
-			"final $1Provider = AsyncNotifierProvider<$2, $3>($2.new);",
-		]
-	},
-	"Riverpod: AsyncNotifier Provider with Family": {
-        "scope": "dart",
-		"prefix": "asyncNotifierProviderFamily",
-		"description": "Create an AsyncNotifierProvider with Family Modifier",
-		"body": [
-			"final $1Provider = AsyncNotifierProviderFamily<$2, $3, $4>($2.new);",
-		]
-	},
+        "prefix": "asyncNotifierProvider",
+        "body": [
+            "final ${1:providerName}Provider = AsyncNotifierProvider<${2:NotifierClass}, ${3:StateType}>(${2:NotifierClass}.new);"
+        ],
+        "description": "Create an AsyncNotifierProvider"
+    },
+    "Riverpod: AsyncNotifier Provider with Family": {
+        "prefix": "asyncNotifierProviderFamily",
+        "body": [
+            "final ${1:providerName}Provider = AsyncNotifierProviderFamily<${2:NotifierClass}, ${3:StateType}, ${4:FamilyType}>(${2:NotifierClass}.new);"
+        ],
+        "description": "Create an AsyncNotifierProvider with Family Modifier"
+    }
 }

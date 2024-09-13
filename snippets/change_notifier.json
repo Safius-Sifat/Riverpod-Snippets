@@ -1,12 +1,11 @@
 {
     "State Notifier": {
-        "scope": "dart",
         "prefix": "changeNotifier",
-        "description": "Create a ChangeNotifier with Editable Parameter",
         "body": [
-            "class $1Notifier extends ChangeNotifier {",
-            "\t$2",
+            "class ${1:Notifier} extends ChangeNotifier {",
+            "  ${2:}",
             "}"
-        ]
+        ],
+        "description": "Create a ChangeNotifier with Editable Parameter"
     }
 }

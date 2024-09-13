@@ -1,28 +1,28 @@
 {
     "Riverpod: Notifier class": {
-        "scope": "dart",
-		"prefix": "notifier",
-		"description": "Create a Notifier class",
-		"body": [
-			"class $1Notifier extends Notifier<$2> {",
-			"\t@override",
-			"\t$2 build() {",
-			"\t\treturn $3;",
-			"\t}",
-			"}"
-		]
-	},
-	"Riverpod: Family Notifier class": {
-        "scope": "dart",
-		"prefix": "notifierFamily",
-		"description": "Create a Notifier with Editable Parameter",
-		"body": [
-			"class $1Notifier extends FamilyNotifier<$2, $3> {",
-			"\t@override",
-			"\t$2 build($3 arg) {",
-			"\t\treturn $4;",
-			"\t}",
-			"}"
-		]
-	},
+        "prefix": "notifier",
+        "body": [
+            "class ${1:Notifier} extends Notifier<${2:StateType}> {",
+            "  @override",
+            "  ${2:StateType} build() {",
+            "    return ${3:initialValue};",
+            "  }",
+            "}"
+        ],
+        "description": "Create a Notifier class"
+
+    },
+    "Riverpod: Family Notifier class": {
+        "prefix": "notifierFamily",
+        "body": [
+            "class ${1:Notifier} extends FamilyNotifier<${2:StateType}, ${3:ArgType}> {",
+            "  @override",
+            "  ${2:StateType} build(${3:ArgType} arg) {",
+            "    return ${4:initialValue};",
+            "  }",
+            "}"
+        ],
+        "description": "Create a Notifier with Editable Parameter"
+
+    }
 }
